@@ -1,0 +1,16 @@
+/*--------------------------------------
+  Author:      Gabriel Svennerberg
+  Email:       gabriel@svennerberg.com
+  Created:     2010-03-23
+  Description: Stylesheet for chapter 6
+----------------------------------------*/
+html, body {
+  height: 100%;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+#map {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+}

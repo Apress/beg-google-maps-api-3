@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pegman</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>
+    <script type="text/javascript">
+function initialize() {
+  var latlng = new google.maps.LatLng(55.6762944, 12.5681157);
+  var settings = {
+    zoom: 10,
+    center: latlng,
+    mapTypeControl: true,
+    scaleControl: true,
+    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+    navigationControl: true,
+    streetViewControl: true,
+    navigationControlOptions: {style: google.maps.NavigationControlStyle.DEFAULT},
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+    var map = new google.maps.Map(document.getElementById("map"), settings);
+    
+    
+
+    var panorama = new google.maps.StreetViewPanorama(map.getDiv()); 
+    map.setStreetView(panorama); 
+  
+   
+
+    // Declare infowindow as a global variable
+    var infowindow;
+    
+    // Creating an array wich will contain the tooltip for markers
+    var tooltip_names=[];
+    // Adding information
+    tooltip_names.push("Test 1","Test 2");
+
+    // Creating an array which will contain the coordinates for the cities
+    var places=[];
+    
+    // Adding a LatLng object for each city
+    places.push(new google.maps.LatLng(55.667468, 12.580032));
+    places.push(new google.maps.LatLng(55.618691, 12.569389));
+
+    // Creating an array wich will contain info in Info Windows
+    var infow = [];
+    // Adding info to Info Windows
+    infow.push("<div><p>Test 1</p></div>");
+    infow.push("<div><p>Test 2</p></div>");
+
+    // Loop to create Markers and Info Windows
+    for (var i = 0; i < places.length; i += 1) {
+      // Call function
+      addMarker(places[i], i);
+    }
+    
+    // Creating Markers and Info Windows
+    function addMarker(latlng,no) {
+      var marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      icon: 'http://google-maps-icons.googlecode.com/files/factory.png',
+      title: tooltip_names[no]
+    });
+
+    // Add click event to the marker
+    google.maps.event.addListener(marker, 'click', function() {
+      // Check to see if the infowindow already exists and is not null
+      if (!infowindow) {
+        // if the infowindow doesn't exist,create an
+        // empty InfoWindow object
+        infowindow = new google.maps.InfoWindow();
+      }
+      // Set the content of the InfoWindow
+      infowindow.setContent(infow[no]);
+      // Tie the InfoWindow to the marker
+      infowindow.open(map,marker);
+    });
+  }
+
+}
+
+</script>
+</head>
+<body onload="initialize();">
+    
+  <div id="map"></div>
+  
+  
+</body>
+</html>

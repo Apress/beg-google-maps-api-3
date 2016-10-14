@@ -1,0 +1,31 @@
+/*--------------------------------------
+  Author:      Gabriel Svennerberg
+  Email:       gabriel@svennerberg.com
+  Created:     2010-04-11
+  Description: Stylesheet for chapter 7
+----------------------------------------*/
+html, body {
+  height: 100%;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin: 0;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling for content in InfoWindows */
+
+#info {
+  width: 350px;
+}
+  
+#info h2 {
+  margin-top: 0;
+}
+
+#info img {
+  float: left;
+  margin-right: 10px;
+}

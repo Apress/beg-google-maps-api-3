@@ -1,0 +1,19 @@
+/*--------------------------------------
+  Author:      Gabriel Svennerberg
+  Email:       gabriel@svennerberg.com
+  Created:     2010-05-25
+  Description: Stylesheet for chapter 10
+----------------------------------------*/
+html, body {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+form {
+  margin-bottom: 10px;
+}
+#map {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+}

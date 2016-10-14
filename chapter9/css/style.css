@@ -1,0 +1,20 @@
+/*--------------------------------------
+  Author:      Gabriel Svennerberg
+  Email:       gabriel@svennerberg.com
+  Created:     2010-04-15
+  Description: Stylesheet for Chapter 9
+----------------------------------------*/
+html, body {
+  height: 100%;
+  margin: 10px;
+}
+body {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: small;
+  background: #fff;
+}
+#map {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #000;
+}

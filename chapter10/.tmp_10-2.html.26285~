@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Chapter 10 - Example 10-2</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>
+		<script type="text/javascript" src="js/10-2.js"></script>
+	</head>
+	<body>
+		<h1>Google Maps API 3 - Reverse GeoCoding</h1>
+		<p>This is an example of how to perform a reverse geocoding (address lookup) using the GeoCoding Service in the Google Maps API 3. 
+			Click the map to get the address of the clicked area.</p>
+		
+    <div id="map"></div>
+    
+    
+	</body>
+</html>
